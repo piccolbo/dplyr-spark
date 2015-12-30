@@ -38,7 +38,8 @@ src_SparkSQL =
         Sys.getenv("HIVE_SERVER2_THRIFT_PORT"),
         10000),
     start.server = FALSE,
-    server.opts = list()){
+    server.opts = list(),
+    ...){
     final.env = NULL
     if(start.server) {
       do.call(
@@ -49,7 +50,7 @@ src_SparkSQL =
         final.env,
         function(e) {stop.server()},
         onexit = TRUE)}
-    src_HS2(host, port, "SparkSQL", final.env)}
+    src_HS2(host, port, "SparkSQL", final.env, ...)}
 
 
 # VALUES not supported, client-local file not supported
