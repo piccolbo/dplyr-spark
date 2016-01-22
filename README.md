@@ -1,5 +1,4 @@
-
-
+# Primary fork is now http://github.com/rzilla/dplyr.spark.hive. Pull requests and new issues should be submitted there, not here
 
 # dplyr.spark.hive
 
